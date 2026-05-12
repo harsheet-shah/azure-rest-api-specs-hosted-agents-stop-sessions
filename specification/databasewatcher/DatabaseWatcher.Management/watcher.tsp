@@ -154,9 +154,10 @@ interface Watchers {
     "x-ms-long-running-operation-options",
     #{ `final-state-via`: "azure-async-operation" }
   )
-  start(
-    ...ResourceInstanceParameters<Watcher>,
-  ): ArmAcceptedLroResponse | ArmResponse<Watcher> | ErrorResponse;
+  start(...ResourceInstanceParameters<Watcher>):
+    | ArmAcceptedLroResponse
+    | ArmResponse<Watcher>
+    | ErrorResponse;
 
   #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("The action to stop monitoring all targets configured for a database watcher.")
@@ -168,9 +169,10 @@ interface Watchers {
     "x-ms-long-running-operation-options",
     #{ `final-state-via`: "azure-async-operation" }
   )
-  stop(
-    ...ResourceInstanceParameters<Watcher>,
-  ): ArmAcceptedLroResponse | ArmResponse<Watcher> | ErrorResponse;
+  stop(...ResourceInstanceParameters<Watcher>):
+    | ArmAcceptedLroResponse
+    | ArmResponse<Watcher>
+    | ErrorResponse;
 }
 
 @doc("The monitoring collection status of a watcher.")
